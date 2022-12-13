@@ -22,4 +22,9 @@ class HomeController extends Controller
         }
         else redirect()->back();
     }
+
+    public function index()
+    {
+        return view('user.home');
+    }
 }
