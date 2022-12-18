@@ -12,13 +12,13 @@ Route::get('/home', [HomeController::class,'redirect']);
 
 Route::middleware([
     'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+        config('jetstream.auth_session'),
+        'verified'
+    ])->group(function () {
+        Route::get('/dashboard', function () {
+            return view('dashboard');
+        })->name('dashboard');
+    });
 
 
 Route::get('/add_doctor_view', [AdminController::class,'addview']);
