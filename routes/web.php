@@ -25,6 +25,8 @@ Route::get('/add_doctor_view', [AdminController::class,'addview']);
 
 Route::POST('/upload_doctor', [AdminController::class,'upload']);
 
+Route::POST('/appointment', [HomeController::class,'appointment']);
+
 
 
 
